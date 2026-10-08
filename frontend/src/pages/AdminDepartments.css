@@ -1,0 +1,583 @@
+/* =========================================
+   ADMIN DEPARTMENTS PAGE
+========================================= */
+
+.admin-departments-page {
+  padding: 32px;
+  background: #f8fafc;
+  min-height: 100vh;
+  color: #0f172a;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-departments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.admin-departments-header > div > span,
+.admin-departments-card-heading span,
+.admin-departments-card-heading > div > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #0f766e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.admin-departments-header h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.admin-departments-header p {
+  margin: 9px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ADD DEPARTMENT BUTTON
+========================================= */
+
+.admin-add-department-btn {
+  border: none;
+  background: #0f766e;
+  color: #ffffff;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.admin-add-department-btn:hover {
+  background: #115e59;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.admin-department-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.admin-department-stat {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.admin-department-stat span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.admin-department-stat strong {
+  color: #0f172a;
+  font-size: 28px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.admin-departments-card,
+.admin-department-overview-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.admin-departments-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-departments-card-heading h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+
+/* =========================================
+   DEPARTMENT TABLE
+========================================= */
+
+.admin-department-table {
+  width: 100%;
+}
+
+.admin-department-table-header,
+.admin-department-table-row {
+  display: grid;
+  grid-template-columns: 2.2fr 0.7fr 0.9fr 1fr 0.8fr 0.7fr;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 24px;
+}
+
+.admin-department-table-header {
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-department-table-row {
+  min-height: 76px;
+  border-top: 1px solid #eef2f7;
+  color: #475569;
+  font-size: 13px;
+}
+
+.admin-department-table-row:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   DEPARTMENT INFO
+========================================= */
+
+.admin-department-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.admin-department-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #ecfdf5;
+  color: #0f766e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.admin-department-info strong {
+  display: block;
+  color: #0f172a;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.admin-department-info span {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-department-available,
+.admin-department-limited,
+.admin-department-active {
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.admin-department-available {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.admin-department-limited {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.admin-department-active {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+
+/* =========================================
+   MANAGE BUTTON
+========================================= */
+
+.admin-department-table-row button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f766e;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-department-table-row button:hover {
+  background: #f0fdfa;
+  border-color: #0f766e;
+}
+
+
+/* =========================================
+   HOSPITAL OVERVIEW
+========================================= */
+
+.admin-department-overview-card {
+  padding-bottom: 24px;
+}
+
+.admin-department-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 24px;
+}
+
+.admin-overview-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.admin-overview-item strong {
+  display: block;
+  color: #0f766e;
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+
+.admin-overview-item span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+.admin-department-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.admin-department-modal {
+  width: 100%;
+  max-width: 760px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.22);
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.admin-department-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 30px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-department-modal-header span {
+  display: block;
+  margin-bottom: 7px;
+  color: #0f766e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.admin-department-modal-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 24px;
+}
+
+.admin-department-modal-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.admin-department-modal-close {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 9px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.admin-department-modal-close:hover {
+  background: #e2e8f0;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-department-modal form {
+  padding: 26px 30px 30px;
+}
+
+.admin-department-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.admin-department-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-department-full-width {
+  grid-column: 1 / -1;
+}
+
+.admin-department-form-group label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-department-form-group input,
+.admin-department-form-group select,
+.admin-department-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 12px 13px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-department-form-group input:focus,
+.admin-department-form-group select:focus,
+.admin-department-form-group textarea:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.10);
+}
+
+.admin-department-form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+
+/* =========================================
+   FORM NOTE
+========================================= */
+
+.admin-department-form-note {
+  margin-top: 24px;
+  padding: 14px 16px;
+  border: 1px solid #ccfbf1;
+  border-radius: 10px;
+  background: #f0fdfa;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-department-form-note strong {
+  color: #115e59;
+  font-size: 13px;
+}
+
+.admin-department-form-note span {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   MODAL ACTIONS
+========================================= */
+
+.admin-department-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.admin-department-cancel-btn,
+.admin-department-create-btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-department-cancel-btn {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.admin-department-cancel-btn:hover {
+  background: #e2e8f0;
+}
+
+.admin-department-create-btn {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.admin-department-create-btn:hover {
+  background: #115e59;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-department-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-department-table {
+    overflow-x: auto;
+  }
+
+  .admin-department-table-header,
+  .admin-department-table-row {
+    min-width: 850px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .admin-departments-page {
+    padding: 20px;
+  }
+
+  .admin-departments-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-department-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-department-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-department-modal {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .admin-department-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-department-full-width {
+    grid-column: auto;
+  }
+
+  .admin-department-modal-header {
+    padding: 22px;
+  }
+
+  .admin-department-modal form {
+    padding: 22px;
+  }
+
+  .admin-department-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .admin-department-cancel-btn,
+  .admin-department-create-btn {
+    width: 100%;
+  }
+
+}

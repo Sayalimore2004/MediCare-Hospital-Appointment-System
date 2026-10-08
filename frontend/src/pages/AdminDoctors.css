@@ -1,0 +1,659 @@
+.admin-doctors-page {
+  min-height: 100%;
+  padding: 32px;
+  background: #f6fbfa;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-doctors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.admin-doctors-header > div:first-child span {
+  color: #159a8c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.admin-doctors-header h1 {
+  margin: 6px 0;
+  color: #173f3b;
+  font-size: 32px;
+}
+
+.admin-doctors-header p {
+  margin: 0;
+  color: #718582;
+  font-size: 14px;
+}
+
+.admin-add-doctor-btn {
+  border: none;
+  background: #159a8c;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.admin-add-doctor-btn:hover {
+  background: #117d72;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.admin-doctor-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.admin-doctor-stat-card {
+  background: white;
+  border: 1px solid #e2eeeb;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 5px 16px rgba(22, 76, 70, 0.05);
+}
+
+.admin-doctor-stat-card span {
+  display: block;
+  color: #718582;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.admin-doctor-stat-card strong {
+  color: #173f3b;
+  font-size: 27px;
+}
+
+/* =========================
+   DOCTOR DIRECTORY
+========================= */
+
+.admin-doctor-directory {
+  background: white;
+  border: 1px solid #e2eeeb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 16px rgba(22, 76, 70, 0.05);
+}
+
+.admin-doctor-directory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 25px;
+  border-bottom: 1px solid #e8f0ee;
+}
+
+.admin-doctor-directory-header span {
+  color: #159a8c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.admin-doctor-directory-header h2 {
+  margin: 5px 0 0;
+  color: #173f3b;
+  font-size: 21px;
+}
+
+.admin-doctor-directory-header p {
+  margin: 0;
+  color: #718582;
+  font-size: 13px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.admin-doctor-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-doctor-table {
+  width: 100%;
+  min-width: 1100px;
+  border-collapse: collapse;
+}
+
+.admin-doctor-table th {
+  padding: 15px 18px;
+  background: #f7fbfa;
+  color: #607a76;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.admin-doctor-table td {
+  padding: 17px 18px;
+  border-top: 1px solid #edf3f1;
+  color: #496560;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.admin-doctor-table tbody tr:hover {
+  background: #fbfefd;
+}
+
+/* =========================
+   DOCTOR INFORMATION
+========================= */
+
+.admin-doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.admin-doctor-avatar {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e5f6f3;
+  color: #159a8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-doctor-info strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #244944;
+  font-size: 13px;
+}
+
+.admin-doctor-info span {
+  display: block;
+  color: #718582;
+  font-size: 11px;
+}
+
+/* =========================
+   STATUS & ACCESS
+========================= */
+
+.admin-doctor-status,
+.admin-doctor-access {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-doctor-status.active {
+  background: #e7f7ef;
+  color: #238253;
+}
+
+.admin-doctor-status.pending {
+  background: #fff6df;
+  color: #a87400;
+}
+
+.admin-doctor-status.inactive {
+  background: #f1f3f3;
+  color: #75817f;
+}
+
+.admin-doctor-access.enabled {
+  background: #e6f7f4;
+  color: #16877b;
+}
+
+.admin-doctor-access.disabled {
+  background: #f1f3f3;
+  color: #75817f;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.admin-doctor-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.admin-doctor-actions button {
+  border: none;
+  border-radius: 7px;
+  padding: 8px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.manage-doctor-btn {
+  background: #e9f7f4;
+  color: #16877b;
+}
+
+.manage-doctor-btn:hover {
+  background: #d8f1ed;
+}
+
+.doctor-credential-btn {
+  background: #f1f5f4;
+  color: #536e69;
+}
+
+.doctor-credential-btn:hover {
+  background: #e6ecea;
+}
+
+.doctor-disable-btn {
+  background: #fff0ef;
+  color: #c2574f;
+}
+
+.doctor-disable-btn:hover {
+  background: #ffe3e1;
+}
+
+.doctor-enable-btn {
+  background: #e7f7ef;
+  color: #238253;
+}
+
+.doctor-enable-btn:hover {
+  background: #d9f1e6;
+}
+
+/* =========================
+   MODAL OVERLAY
+========================= */
+
+.admin-doctor-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(18, 47, 43, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* =========================
+   DOCTOR FORM MODAL
+========================= */
+
+.admin-doctor-modal {
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(20, 65, 60, 0.2);
+}
+
+.admin-doctor-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: transparent;
+  color: #718582;
+  font-size: 27px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.admin-doctor-modal-close:hover {
+  background: #f1f6f5;
+  color: #244944;
+}
+
+.admin-modal-label {
+  display: inline-block;
+  color: #159a8c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.admin-doctor-modal h2,
+.admin-doctor-credentials-modal h2 {
+  margin: 6px 0;
+  color: #173f3b;
+  font-size: 25px;
+}
+
+.admin-doctor-modal > p,
+.admin-doctor-credentials-modal > p {
+  margin: 0 0 22px;
+  color: #718582;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.admin-doctor-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.admin-doctor-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-doctor-form-group label {
+  margin-bottom: 7px;
+  color: #496560;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-doctor-form-group input,
+.admin-doctor-form-group select {
+  width: 100%;
+  height: 43px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid #d5e6e3;
+  border-radius: 8px;
+  background: #fbfefd;
+  color: #274a46;
+  outline: none;
+  font-size: 13px;
+}
+
+.admin-doctor-form-group input::placeholder {
+  color: #a0b1ae;
+}
+
+.admin-doctor-form-group input:focus,
+.admin-doctor-form-group select:focus {
+  border-color: #159a8c;
+  box-shadow: 0 0 0 3px rgba(21, 154, 140, 0.1);
+}
+
+.admin-doctor-form-group input:disabled {
+  background: #f1f5f4;
+  color: #82938f;
+  cursor: not-allowed;
+}
+
+/* =========================
+   MODAL ACTIONS
+========================= */
+
+.admin-doctor-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #e8f0ee;
+}
+
+.admin-doctor-cancel-btn,
+.admin-doctor-save-btn {
+  min-width: 120px;
+  height: 43px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-doctor-cancel-btn {
+  border: 1px solid #d5e6e3;
+  background: white;
+  color: #496560;
+}
+
+.admin-doctor-cancel-btn:hover {
+  background: #f5faf9;
+}
+
+.admin-doctor-save-btn {
+  border: none;
+  background: #159a8c;
+  color: white;
+}
+
+.admin-doctor-save-btn:hover {
+  background: #117d72;
+}
+
+/* =========================
+   CREDENTIAL MODAL
+========================= */
+
+.admin-doctor-credentials-modal {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(20, 65, 60, 0.2);
+}
+
+.credentials-lock-icon {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 17px;
+  border-radius: 14px;
+  background: #e8f7f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.credentials-doctor-info {
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: #f6fbfa;
+}
+
+.credentials-doctor-info strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #244944;
+  font-size: 14px;
+}
+
+.credentials-doctor-info span {
+  color: #718582;
+  font-size: 12px;
+}
+
+.credentials-field {
+  margin-bottom: 15px;
+}
+
+.credentials-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #496560;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.credentials-field > div {
+  padding: 12px;
+  border: 1px solid #e1ece9;
+  border-radius: 8px;
+  background: #f7fbfa;
+  color: #244944;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.credentials-password {
+  color: #159a8c !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.credentials-warning {
+  margin-top: 5px;
+  padding: 11px;
+  border: 1px solid #f2dfad;
+  border-radius: 8px;
+  background: #fff8e8;
+  color: #80691e;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.credentials-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.credentials-actions button {
+  flex: 1;
+  height: 43px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.credentials-copy-btn {
+  border: none;
+  background: #159a8c;
+  color: white;
+}
+
+.credentials-copy-btn:hover {
+  background: #117d72;
+}
+
+.credentials-done-btn {
+  border: 1px solid #d5e6e3;
+  background: white;
+  color: #496560;
+}
+
+.credentials-done-btn:hover {
+  background: #f5faf9;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.admin-doctor-modal::-webkit-scrollbar {
+  width: 7px;
+}
+
+.admin-doctor-modal::-webkit-scrollbar-thumb {
+  background: #c9dfdb;
+  border-radius: 10px;
+}
+
+.admin-doctor-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+  .admin-doctor-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-doctors-header {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .admin-doctors-page {
+    padding: 20px;
+  }
+
+  .admin-doctors-header {
+    flex-direction: column;
+  }
+
+  .admin-add-doctor-btn {
+    width: 100%;
+  }
+
+  .admin-doctor-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-doctor-directory-header {
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .admin-doctor-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-doctor-modal,
+  .admin-doctor-credentials-modal {
+    padding: 22px;
+  }
+
+  .admin-doctor-modal-actions,
+  .credentials-actions {
+    flex-direction: column;
+  }
+
+  .admin-doctor-cancel-btn,
+  .admin-doctor-save-btn {
+    width: 100%;
+  }
+}

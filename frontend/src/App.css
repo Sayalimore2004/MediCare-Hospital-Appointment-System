@@ -1,0 +1,574 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7fbfc;
+  color: #172b35;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e8eff1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #123c4a;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background: #0b8793;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 35px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #5c6c73;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar nav a:hover {
+  color: #0b8793;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.login-btn {
+  border: 1px solid #d8e5e8;
+  background: white;
+  color: #23444e;
+}
+
+.signup-btn {
+  border: none;
+  background: #0b8793;
+  color: white;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 650px;
+  padding: 75px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  background: linear-gradient(
+    135deg,
+    #f8fcfc 0%,
+    #eef8f9 100%
+  );
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  background: #e2f3f4;
+  color: #087781;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero-badge span {
+  font-size: 9px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  color: #15343e;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #0b8793;
+}
+
+.hero-content > p {
+  color: #66777e;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 13px;
+  margin-top: 32px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 22px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  border: none;
+  background: #0b8793;
+  color: white;
+}
+
+.secondary-btn {
+  border: 1px solid #cbdfe2;
+  background: white;
+  color: #23444e;
+}
+
+.hero-info {
+  display: flex;
+  gap: 45px;
+  margin-top: 50px;
+}
+
+.hero-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero-info strong {
+  font-size: 23px;
+  color: #173b45;
+}
+
+.hero-info span {
+  color: #7a898f;
+  font-size: 12px;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-preview {
+  width: 440px;
+  padding: 24px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 25px 70px rgba(28, 76, 87, 0.13);
+  border: 1px solid #e5eef0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.small-label {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #8a999e;
+}
+
+.dashboard-header h3 {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #203b44;
+}
+
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dceff1;
+  color: #087781;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* Appointment */
+
+.appointment-card {
+  padding: 20px;
+  border-radius: 14px;
+  background: #f5fafb;
+  border: 1px solid #e1edef;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-top > span:first-child {
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  color: #7c8c91;
+}
+
+.status {
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #dff4e8;
+  color: #23804d;
+  font-size: 9px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 22px 0;
+}
+
+.doctor-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #dceff1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.doctor-info h4 {
+  font-size: 15px;
+  color: #203b44;
+}
+
+.doctor-info p {
+  margin-top: 5px;
+  color: #718187;
+  font-size: 12px;
+}
+
+.appointment-details {
+  display: flex;
+  gap: 50px;
+  padding: 15px 0;
+  border-top: 1px solid #dde9eb;
+  border-bottom: 1px solid #dde9eb;
+}
+
+.appointment-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.appointment-details span {
+  font-size: 9px;
+  color: #89979c;
+}
+
+.appointment-details strong {
+  font-size: 12px;
+  color: #304b54;
+}
+
+.appointment-btn {
+  width: 100%;
+  border: none;
+  margin-top: 15px;
+  padding: 11px;
+  border-radius: 8px;
+  background: #0b8793;
+  color: white;
+  font-size: 12px;
+}
+
+
+/* Mini cards */
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 13px;
+}
+
+.mini-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid #e5edef;
+  border-radius: 11px;
+}
+
+.mini-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #edf7f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-card div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mini-card span {
+  font-size: 9px;
+  color: #89979c;
+}
+
+.mini-card strong {
+  font-size: 11px;
+  color: #304b54;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.departments,
+.doctors {
+  padding: 90px 7%;
+  background: white;
+}
+
+.doctors {
+  background: #f7fbfc;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 45px;
+}
+
+.section-heading > span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #0b8793;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  margin: 10px 0;
+  font-size: 34px;
+  color: #183943;
+}
+
+.section-heading p {
+  color: #75858b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* Departments */
+
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.department-card {
+  padding: 28px 22px;
+  border: 1px solid #e4edef;
+  border-radius: 14px;
+  background: white;
+  transition: 0.2s;
+}
+
+.department-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(28, 76, 87, 0.08);
+}
+
+.department-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 11px;
+  background: #edf7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  margin-bottom: 18px;
+}
+
+.department-card h3 {
+  font-size: 16px;
+  color: #26434c;
+  margin-bottom: 7px;
+}
+
+.department-card p {
+  color: #7a898f;
+  font-size: 12px;
+}
+
+
+/* Doctors */
+
+.doctor-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.doctor-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #e4edef;
+}
+
+.doctor-photo {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #e5f3f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+}
+
+.doctor-card h3 {
+  font-size: 16px;
+  color: #27444d;
+}
+
+.doctor-card p {
+  margin: 6px 0 15px;
+  color: #7a898f;
+  font-size: 12px;
+}
+
+.doctor-card button {
+  border: 1px solid #cfe1e4;
+  background: white;
+  color: #087781;
+  padding: 8px 15px;
+  border-radius: 7px;
+  font-size: 11px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 55px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .dashboard-preview {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .department-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .hero-info {
+    gap: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .department-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-cards {
+    grid-template-columns: 1fr;
+  }
+}

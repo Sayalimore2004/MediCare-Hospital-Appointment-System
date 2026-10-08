@@ -1,0 +1,260 @@
+.doctor-profile-page {
+  min-height: 100vh;
+  background: #f5f8fc;
+  padding-bottom: 50px;
+}
+
+/* Header */
+
+.doctor-profile-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 45px 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: white;
+}
+
+.profile-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #e8f1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  flex-shrink: 0;
+}
+
+.profile-main {
+  flex: 1;
+}
+
+.profile-status {
+  display: inline-block;
+  color: #16a34a;
+  background: #ecfdf3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.profile-main h1 {
+  margin: 5px 0;
+  font-size: 34px;
+  color: #1e293b;
+}
+
+.profile-specialization {
+  margin: 5px 0 15px;
+  color: #64748b;
+  font-size: 18px;
+}
+
+.profile-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f59e0b;
+  font-size: 16px;
+}
+
+.profile-rating strong {
+  color: #1e293b;
+}
+
+.profile-rating span {
+  color: #64748b;
+}
+
+/* Main Content */
+
+.doctor-profile-content {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 25px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+.profile-card h2 {
+  margin: 0 0 15px;
+  color: #1e293b;
+  font-size: 21px;
+}
+
+.profile-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Professional Information */
+
+.professional-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.professional-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.professional-info span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.professional-info strong {
+  color: #1e293b;
+  font-size: 15px;
+}
+
+/* Appointment Card */
+
+.appointment-card-profile {
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+  height: fit-content;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+  position: sticky;
+  top: 20px;
+}
+
+.appointment-label {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.appointment-card-profile h2 {
+  margin: 10px 0;
+  color: #1e293b;
+  font-size: 22px;
+}
+
+.appointment-card-profile p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.consultation-fee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.consultation-fee span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.consultation-fee strong {
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.book-appointment-btn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  background: #2563eb;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 9px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.book-appointment-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Doctor Not Found */
+
+.profile-not-found {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 50px;
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+}
+
+.profile-not-found h1 {
+  color: #1e293b;
+}
+
+.profile-not-found p {
+  color: #64748b;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .doctor-profile-header {
+    margin: 0;
+    padding: 30px 20px;
+  }
+
+  .doctor-profile-content {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .appointment-card-profile {
+    position: static;
+  }
+
+  .professional-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .doctor-profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-rating {
+    justify-content: center;
+  }
+
+  .profile-main h1 {
+    font-size: 27px;
+  }
+}
+

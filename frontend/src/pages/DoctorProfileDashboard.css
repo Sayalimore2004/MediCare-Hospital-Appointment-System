@@ -1,0 +1,468 @@
+/* =========================================
+   DOCTOR PROFILE PAGE
+   ========================================= */
+
+.doctor-profile-dashboard-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f5fafa;
+  color: #173f3e;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.doctor-profile-dashboard-header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 42px 45px 36px;
+  background: linear-gradient(135deg, #eaf8f7, #f7fbfc);
+  border-bottom: 1px solid #e1eeee;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.doctor-profile-dashboard-header > div:first-child > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #168b87;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.doctor-profile-dashboard-header h1 {
+  margin: 0 0 8px;
+  color: #123b3a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.doctor-profile-dashboard-header p {
+  margin: 0;
+  color: #71817f;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER BUTTONS
+   ========================================= */
+
+.doctor-profile-edit-btn,
+.doctor-profile-save-btn,
+.doctor-profile-cancel-btn {
+  min-width: 130px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.doctor-profile-edit-btn,
+.doctor-profile-save-btn {
+  background: #168b87;
+  color: #ffffff;
+}
+
+.doctor-profile-edit-btn:hover,
+.doctor-profile-save-btn:hover {
+  background: #11736f;
+  transform: translateY(-1px);
+}
+
+.doctor-profile-cancel-btn {
+  background: #ffffff;
+  color: #4d6563;
+  border: 1px solid #d4e4e2;
+}
+
+.doctor-profile-cancel-btn:hover {
+  background: #f3f8f7;
+}
+
+.doctor-profile-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =========================================
+   PROFILE OVERVIEW
+   ========================================= */
+
+.doctor-profile-overview-card {
+  max-width: 1100px;
+  margin: 35px auto 22px;
+  padding: 26px 28px;
+
+  background: #ffffff;
+  border: 1px solid #dfeceb;
+  border-radius: 15px;
+
+  box-shadow: 0 6px 22px rgba(19, 65, 64, 0.04);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  box-sizing: border-box;
+}
+
+.doctor-profile-main {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.doctor-profile-large-avatar {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+
+  border-radius: 50%;
+
+  background: #eaf8f7;
+  color: #168b87;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.doctor-profile-main-info h2 {
+  margin: 0 0 5px;
+  color: #123b3a;
+  font-size: 22px;
+}
+
+.doctor-profile-main-info span {
+  display: block;
+  margin-bottom: 5px;
+  color: #168b87;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.doctor-profile-main-info p {
+  margin: 0;
+  color: #71817f;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+.doctor-profile-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 13px;
+
+  background: #e8f7f1;
+  color: #18805f;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.doctor-profile-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #18805f;
+}
+
+
+/* =========================================
+   COMMON PROFILE CARD
+   ========================================= */
+
+.doctor-profile-card {
+  max-width: 1100px;
+  margin: 0 auto 22px;
+  padding: 28px;
+
+  background: #ffffff;
+  border: 1px solid #dfeceb;
+  border-radius: 15px;
+
+  box-shadow: 0 6px 22px rgba(19, 65, 64, 0.04);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CARD HEADING
+   ========================================= */
+
+.doctor-profile-card-heading {
+  margin-bottom: 22px;
+}
+
+.doctor-profile-card-heading span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #168b87;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.doctor-profile-card-heading h2 {
+  margin: 0;
+  color: #173f3e;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   DETAILS GRID
+   ========================================= */
+
+.doctor-profile-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.doctor-profile-detail {
+  min-height: 80px;
+  padding: 18px 22px;
+  border-top: 1px solid #e6eeee;
+  box-sizing: border-box;
+}
+
+.doctor-profile-detail:nth-child(odd) {
+  padding-left: 0;
+  border-right: 1px solid #e6eeee;
+}
+
+.doctor-profile-detail:nth-child(even) {
+  padding-right: 0;
+}
+
+.doctor-profile-detail span {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #71817f;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.doctor-profile-detail strong {
+  display: block;
+  color: #173f3e;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   EDIT INPUT
+   ========================================= */
+
+.doctor-profile-input {
+  width: 100%;
+  padding: 10px 12px;
+
+  border: 1px solid #cfe1df;
+  border-radius: 7px;
+
+  background: #fbfdfd;
+  color: #173f3e;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+.doctor-profile-input:focus {
+  border-color: #168b87;
+  box-shadow: 0 0 0 3px rgba(22, 139, 135, 0.08);
+}
+
+
+/* =========================================
+   ACCOUNT CARD
+   ========================================= */
+
+.doctor-account-card {
+  margin-bottom: 50px;
+}
+
+.doctor-profile-account-row {
+  min-height: 70px;
+  padding: 17px 0;
+
+  border-top: 1px solid #e6eeee;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.doctor-profile-account-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.doctor-profile-account-row strong {
+  color: #173f3e;
+  font-size: 14px;
+}
+
+.doctor-profile-account-row span {
+  color: #71817f;
+  font-size: 13px;
+}
+
+.doctor-profile-active-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  background: #e8f7f1;
+  color: #18805f !important;
+
+  font-size: 12px !important;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .doctor-profile-overview-card,
+  .doctor-profile-card {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .doctor-profile-dashboard-header {
+    padding: 30px 22px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .doctor-profile-dashboard-header h1 {
+    font-size: 26px;
+  }
+
+  .doctor-profile-header-actions {
+    width: 100%;
+  }
+
+  .doctor-profile-header-actions button {
+    flex: 1;
+  }
+
+  .doctor-profile-edit-btn {
+    width: 100%;
+  }
+
+  .doctor-profile-overview-card,
+  .doctor-profile-card {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .doctor-profile-overview-card {
+    padding: 22px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .doctor-profile-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-profile-detail:nth-child(odd),
+  .doctor-profile-detail:nth-child(even) {
+    padding-left: 0;
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .doctor-profile-account-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 450px) {
+
+  .doctor-profile-dashboard-header {
+    padding: 25px 18px;
+  }
+
+  .doctor-profile-overview-card,
+  .doctor-profile-card {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .doctor-profile-main {
+    align-items: flex-start;
+  }
+
+  .doctor-profile-large-avatar {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+  }
+
+  .doctor-profile-main-info h2 {
+    font-size: 18px;
+  }
+
+}
